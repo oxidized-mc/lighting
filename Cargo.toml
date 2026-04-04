@@ -12,31 +12,57 @@ keywords     = ["minecraft", "oxidized-mc"]
 categories   = ["game-development"]
 
 [dependencies]
-oxidized-chunks    = "0.1"
-oxidized-registry  = "0.1"
-oxidized-mc-types  = "0.1"
-oxidized-types     = "0.1"
+oxidized-chunks      = { git = "https://github.com/oxidized-mc/chunks.git" }
+oxidized-registry    = { git = "https://github.com/oxidized-mc/registry.git" }
+oxidized-mc-types    = { git = "https://github.com/oxidized-mc/mc-types.git" }
+oxidized-types       = { git = "https://github.com/oxidized-mc/types.git" }
 ahash              = "0.8"
 thiserror          = "2"
 
 [dev-dependencies]
 proptest = "1"
 
-[patch.crates-io]
-oxidized-chunks      = { path = "../chunks" }
-oxidized-registry    = { path = "../registry" }
-oxidized-mc-types    = { path = "../mc-types" }
-oxidized-types       = { path = "../types" }
-oxidized-nbt         = { path = "../nbt" }
+[patch."https://github.com/oxidized-mc/chunks.git"]
+oxidized-chunks = { path = "../chunks" }
+
+[patch."https://github.com/oxidized-mc/registry.git"]
+oxidized-registry = { path = "../registry" }
+
+[patch."https://github.com/oxidized-mc/mc-types.git"]
+oxidized-mc-types = { path = "../mc-types" }
+
+[patch."https://github.com/oxidized-mc/types.git"]
+oxidized-types = { path = "../types" }
+
+[patch."https://github.com/oxidized-mc/nbt.git"]
+oxidized-nbt = { path = "../nbt" }
+
+[patch."https://github.com/oxidized-mc/compression.git"]
 oxidized-compression = { path = "../compression" }
-oxidized-crypto      = { path = "../crypto" }
-oxidized-auth        = { path = "../auth" }
-oxidized-codec       = { path = "../codec" }
-oxidized-chat        = { path = "../chat" }
-oxidized-transport   = { path = "../transport" }
-oxidized-anvil       = { path = "../anvil" }
-oxidized-commands    = { path = "../commands" }
-oxidized-inventory   = { path = "../inventory" }
+
+[patch."https://github.com/oxidized-mc/crypto.git"]
+oxidized-crypto = { path = "../crypto" }
+
+[patch."https://github.com/oxidized-mc/auth.git"]
+oxidized-auth = { path = "../auth" }
+
+[patch."https://github.com/oxidized-mc/codec.git"]
+oxidized-codec = { path = "../codec" }
+
+[patch."https://github.com/oxidized-mc/chat.git"]
+oxidized-chat = { path = "../chat" }
+
+[patch."https://github.com/oxidized-mc/transport.git"]
+oxidized-transport = { path = "../transport" }
+
+[patch."https://github.com/oxidized-mc/anvil.git"]
+oxidized-anvil = { path = "../anvil" }
+
+[patch."https://github.com/oxidized-mc/commands.git"]
+oxidized-commands = { path = "../commands" }
+
+[patch."https://github.com/oxidized-mc/inventory.git"]
+oxidized-inventory = { path = "../inventory" }
 
 [lints.rust]
 missing_docs   = "warn"
