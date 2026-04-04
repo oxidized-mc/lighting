@@ -29,10 +29,10 @@ pub fn light_chunk_parallel(chunk: &mut LevelChunk) {
 #[allow(clippy::unwrap_used, clippy::expect_used)]
 mod tests {
     use super::*;
-    use oxidized_registry::{BEDROCK, DIRT, GRASS_BLOCK};
-    use oxidized_types::ChunkPos;
     use oxidized_chunks::LevelChunk;
     use oxidized_chunks::level_chunk::OVERWORLD_MIN_Y;
+    use oxidized_registry::{BEDROCK, DIRT, GRASS_BLOCK};
+    use oxidized_types::ChunkPos;
 
     fn flat_chunk() -> LevelChunk {
         let mut chunk = LevelChunk::new(ChunkPos::new(0, 0));

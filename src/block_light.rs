@@ -5,8 +5,8 @@
 
 use std::collections::VecDeque;
 
-use oxidized_registry::BlockStateId;
 use oxidized_chunks::LevelChunk;
+use oxidized_registry::BlockStateId;
 
 use super::propagation::{
     ALL_DIRECTIONS, BoundaryEntry, LightEntry, propagate_block_light_increase,
@@ -74,9 +74,9 @@ pub fn initialize_block_light(chunk: &mut LevelChunk) -> Vec<BoundaryEntry> {
 #[allow(clippy::unwrap_used, clippy::expect_used)]
 mod tests {
     use super::*;
+    use oxidized_chunks::LevelChunk;
     use oxidized_registry::BlockRegistry;
     use oxidized_types::ChunkPos;
-    use oxidized_chunks::LevelChunk;
 
     fn air_chunk() -> LevelChunk {
         LevelChunk::new(ChunkPos::new(0, 0))

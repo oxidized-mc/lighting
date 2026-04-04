@@ -7,10 +7,10 @@
 use std::collections::VecDeque;
 
 use ahash::AHashMap;
-use oxidized_mc_types::SectionPos;
-use oxidized_registry::BlockStateId;
 use oxidized_chunks::LevelChunk;
 use oxidized_chunks::sky_light_sources::ChunkSkyLightSources;
+use oxidized_mc_types::SectionPos;
+use oxidized_registry::BlockStateId;
 
 use super::block_light::initialize_block_light;
 use super::propagation::{
@@ -544,11 +544,11 @@ impl Default for LightEngine {
 mod tests {
     use super::*;
     use crate::queue::LightUpdate;
+    use oxidized_chunks::LevelChunk;
+    use oxidized_chunks::level_chunk::OVERWORLD_MIN_Y;
     use oxidized_mc_types::BlockPos;
     use oxidized_registry::{BEDROCK, BlockRegistry, BlockStateId, DIRT, GRASS_BLOCK};
     use oxidized_types::ChunkPos;
-    use oxidized_chunks::LevelChunk;
-    use oxidized_chunks::level_chunk::OVERWORLD_MIN_Y;
 
     fn stone_id() -> u32 {
         u32::from(
