@@ -1,6 +1,6 @@
 //! Lighting engine for sky light and block light propagation.
 //!
-//! Implements batched BFS with parallel section processing per ADR-017.
+//! Implements batched BFS with parallel section processing.
 //!
 //! # Architecture
 //!

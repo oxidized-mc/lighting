@@ -2,7 +2,7 @@
 //!
 //! Processes [`super::queue::LightUpdateQueue`] entries in batched passes,
 //! grouping updates by section and propagating cross-section changes.
-//! See ADR-017 for the algorithm design.
+//! Uses batched BFS with decrease-then-increase passes and parallel section processing.
 
 use std::collections::VecDeque;
 
@@ -237,7 +237,7 @@ impl LightEngine {
         let mut block_boundary = Vec::new();
         let mut sky_boundary = Vec::new();
 
-        // Run decrease passes first (per ADR-017).
+        // Run decrease passes first (decrease-then-increase ordering).
         // Note: decrease boundary entries are intentionally discarded.
         // They carry the old (removed) light level, but our cross-chunk
         // propagation treats all entries as increases. Feeding decrease
@@ -335,7 +335,7 @@ impl LightEngine {
 
     /// Computes full sky + block light for a newly generated chunk.
     ///
-    /// Called by the worldgen pipeline at the Light status (ADR-016).
+    /// Called by the worldgen pipeline at the Light status.
     /// Initializes sky light using per-column source tracking, seeds block light
     /// from emitters, and runs BFS propagation for both light types.
     ///

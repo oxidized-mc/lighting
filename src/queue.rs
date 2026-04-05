@@ -73,7 +73,7 @@ impl LightUpdateQueue {
 /// A single light update caused by a block change.
 ///
 /// Records both the old and new emission/opacity so the engine can perform
-/// the decrease-then-increase BFS passes described in ADR-017.
+/// the decrease-then-increase BFS passes used by the lighting engine.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct LightUpdate {
     /// World position of the changed block.

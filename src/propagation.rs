@@ -1,6 +1,6 @@
 //! Core BFS propagation algorithms for light increase and decrease.
 //!
-//! These functions implement the two-pass BFS described in ADR-017:
+//! These functions implement the two-pass BFS (decrease-then-increase):
 //! 1. **Decrease pass** — removes light from positions where the source was
 //!    removed or weakened, re-seeding the increase queue for neighbors with
 //!    independent light sources.

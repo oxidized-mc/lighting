@@ -1,9 +1,9 @@
 //! Parallel section processing for worldgen chunk lighting.
 //!
-//! Per ADR-017, alternating even/odd Y-layers can be processed in parallel
-//! since they don't share vertical boundaries. This module provides the
-//! rayon-based parallel full-chunk lighting used by the worldgen pipeline
-//! at the Light status (ADR-016).
+//! Alternating even/odd Y-layers can be processed in parallel since they
+//! don't share vertical boundaries. This module provides the rayon-based
+//! parallel full-chunk lighting used by the worldgen pipeline at the Light
+//! status.
 
 use oxidized_chunks::LevelChunk;
 
@@ -16,7 +16,7 @@ use super::sky::initialize_sky_light;
 /// Parallel even/odd section processing will be added when the worldgen
 /// pipeline is fully operational and benchmarks justify the complexity.
 ///
-/// Used by the worldgen pipeline at the Light status (ADR-016).
+/// Used by the worldgen pipeline at the Light status.
 pub fn light_chunk_parallel(chunk: &mut LevelChunk) {
     // Phase 1: Sky light (vertical pass + horizontal BFS).
     initialize_sky_light(chunk);
