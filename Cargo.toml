@@ -16,7 +16,7 @@ categories   = ["game-development"]
 [dependencies]
 oxidized-chunks      = "0.1.0-dev"
 oxidized-registry    = "0.1.0-dev"
-oxidized-mc-types    = "0.2"
+oxidized-mc-types    = "0.3"
 oxidized-types       = "0.1.0-dev"
 ahash              = "0.8"
 thiserror          = "2"
