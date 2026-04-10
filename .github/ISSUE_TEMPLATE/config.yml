@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Project
+    url: https://github.com/oxidized-mc/lighting
+    about: Project overview and status
+  - name: 💬 Discussions
+    url: https://github.com/oxidized-mc/lighting/discussions
+    about: General questions and community chat
