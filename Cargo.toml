@@ -16,7 +16,7 @@ categories   = ["game-development"]
 [dependencies]
 oxidized-chunks      = "0.1.0-dev"
 oxidized-registry    = "0.1.0-dev"
-oxidized-mc-types    = "0.1.0-dev"
+oxidized-mc-types    = "0.2"
 oxidized-types       = "0.1.0-dev"
 ahash              = "0.8"
 thiserror          = "2"
@@ -51,19 +51,3 @@ must_use_candidate         = "allow"
 cast_possible_truncation   = "allow"
 cast_sign_loss             = "allow"
 cast_possible_wrap         = "allow"
-
-[patch.crates-io]
-oxidized-anvil = { path = "../anvil" }
-oxidized-auth = { path = "../auth" }
-oxidized-chat = { path = "../chat" }
-oxidized-chunks = { path = "../chunks" }
-oxidized-codec = { path = "../codec" }
-oxidized-commands = { path = "../commands" }
-oxidized-compression = { path = "../compression" }
-oxidized-crypto = { path = "../crypto" }
-oxidized-inventory = { path = "../inventory" }
-oxidized-mc-types = { path = "../mc-types" }
-oxidized-nbt = { path = "../nbt" }
-oxidized-registry = { path = "../registry" }
-oxidized-transport = { path = "../transport" }
-oxidized-types = { path = "../types" }
