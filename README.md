@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/oxidized-mc/lighting/actions/workflows/ci.yml/badge.svg)](https://github.com/oxidized-mc/lighting/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Crates.io](https://img.shields.io/crates/v/oxidized-lighting.svg)](https://crates.io/crates/oxidized-lighting)
 
 BFS light propagation engine — sky light, block light, cross-chunk boundary handling
 
